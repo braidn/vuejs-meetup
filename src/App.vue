@@ -1,6 +1,7 @@
 
 <template>
   <div class="messages">
+    <status></status>
     <messages
       :messages="MessageStore.state.messages"></messages>
     <input-bar
@@ -11,6 +12,7 @@
 <script>
   import InputBar from './components/InputBar.vue'
   import Messages from './components/Messages.vue'
+  import Status from './components/Status.js'
   import MessageStore from './store/messages'
   export default {
     data () {
@@ -20,7 +22,8 @@
     },
     components: {
       InputBar,
-      Messages
+      Messages,
+      Status
     }
 }
 </script>
